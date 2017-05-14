@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+    <device id="ipad9_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Table-->
+        <scene sceneID="7oF-1a-Qx2">
+            <objects>
+                <tableViewController id="M0w-a7-38k" customClass="TableViewController" customModule="Insurance" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="OVU-3s-hhC">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="testIdentifier" id="DgV-z3-PK7">
+                                <rect key="frame" x="0.0" y="28" width="768" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DgV-z3-PK7" id="URX-Sq-jN6">
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="M0w-a7-38k" id="yeO-zH-5Ee"/>
+                            <outlet property="delegate" destination="M0w-a7-38k" id="oaE-2m-w2v"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Table" id="Dra-RX-t9L"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cgZ-JS-Vib" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1876" y="790"/>
+        </scene>
+        <!--Table-->
+        <scene sceneID="8iv-60-bgv">
+            <objects>
+                <navigationController id="98X-h0-uqJ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Table" selectedImage="second" id="5v2-TS-73j"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="u2x-01-cCx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="M0w-a7-38k" kind="relationship" relationship="rootViewController" id="LqE-Bq-be9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PeN-z8-Nkc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1006" y="789"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="uf1-bE-Pw4" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="98X-h0-uqJ" kind="relationship" relationship="viewControllers" id="hTy-uV-60e"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+        <!--Heatmap-->
+        <scene sceneID="vDO-Zb-YIO">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uf1-bE-Pw4" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Heatmap" selectedImage="first" id="cPa-gy-q4n"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hXe-Om-sMw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2AJ-hc-qex" kind="relationship" relationship="rootViewController" id="gOc-Qd-uPZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ngV-Yu-LZ1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1006" y="0.0"/>
+        </scene>
+        <!--Heatmap-->
+        <scene sceneID="Kwm-kB-rI9">
+            <objects>
+                <viewController id="2AJ-hc-qex" customClass="MapViewController" customModule="Insurance" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tXK-d8-xQV"/>
+                        <viewControllerLayoutGuide type="bottom" id="hK3-mw-rXT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="b11-k9-Mk5">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Bzb-Hs-5bX">
+                                <rect key="frame" x="0.0" y="64" width="768" height="911"/>
+                            </mapView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="jWz-4A-xOE">
+                                <rect key="frame" x="211" y="897" width="347" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="347" id="dsw-pu-gSc"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="TIV"/>
+                                    <segment title="Wildfires (US)"/>
+                                    <segment title="Wildfires (World)"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segControlChange:" destination="2AJ-hc-qex" eventType="valueChanged" id="vMm-yk-nXS"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Bzb-Hs-5bX" firstAttribute="top" secondItem="tXK-d8-xQV" secondAttribute="bottom" id="ItT-WI-US8"/>
+                            <constraint firstAttribute="trailing" secondItem="Bzb-Hs-5bX" secondAttribute="trailing" id="OSt-vu-r5y"/>
+                            <constraint firstItem="hK3-mw-rXT" firstAttribute="top" secondItem="jWz-4A-xOE" secondAttribute="bottom" constant="50" id="WOg-lP-0mR"/>
+                            <constraint firstItem="hK3-mw-rXT" firstAttribute="top" secondItem="Bzb-Hs-5bX" secondAttribute="bottom" id="Wmj-CZ-QKy"/>
+                            <constraint firstItem="Bzb-Hs-5bX" firstAttribute="centerX" secondItem="b11-k9-Mk5" secondAttribute="centerX" id="eVS-vQ-nVO"/>
+                            <constraint firstItem="Bzb-Hs-5bX" firstAttribute="leading" secondItem="b11-k9-Mk5" secondAttribute="leading" id="hTk-w2-Hai"/>
+                            <constraint firstItem="jWz-4A-xOE" firstAttribute="centerX" secondItem="b11-k9-Mk5" secondAttribute="centerX" id="r3q-TW-5q1"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Heatmap" id="n0b-hj-AVw"/>
+                    <connections>
+                        <outlet property="mapView" destination="Bzb-Hs-5bX" id="G1k-Dk-lTq"/>
+                        <outlet property="segControl" destination="jWz-4A-xOE" id="iLr-Ea-za4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SMY-bc-Y5e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1875.78125" y="-0.5859375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="first" width="30" height="30"/>
+        <image name="second" width="30" height="30"/>
+    </resources>
+</document>
